@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vann AI Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<canvas id="matrixCanvas"></canvas>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+        <h1>vann Generator</h1>
+        <p>AI media generation system</p>
+    </header>
+
+    <div class="media-placeholder" id="mediaPlaceholder">
+        <div class="media-placeholder-icon">◉</div>
+        <span>Belum ada foto / video</span>
+    </div>
+
+
+       <!-- VIDEO DI ATAS TABEL KE-2 -->
+<section class="video-card">
+
+    <video
+        class="main-video"
+        src="live3.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto">
+
+        Browser kamu tidak mendukung video.
+
+    </video>
+
+</section>
+
+  
+
+        
+
+
+    <!-- INPUT -->
+    <section class="card">
+
+        <div class="card-title">
+            AI GENERATOR
+        </div>
+
+
+        <!-- 1 MODEL -->
+        <div class="input-group">
+
+            <label>
+                1. Pilih Model AI
+            </label>
+
+            <div class="input-wrapper">
+
+                <span class="input-icon">
+                    ✦
+                </span>
+
+                <select id="apiSelect">
+                    <option>
+                        Memuat model AI...
+                    </option>
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2 PROMPT -->
+        <div class="input-group">
+
+            <label>
+                2. Isi Prompt
+            </label>
+
+            <textarea
+                id="promptInput"
+                placeholder="Masukkan instruksi atau prompt untuk AI..."></textarea>
+
+        </div>
+
+
+        <!-- 3 MEDIA -->
+        <div class="input-group">
+
+            <label>
+                3. Upload Foto / Video
+            </label>
+
+            <div class="input-wrapper">
+
+                <input
+                    id="mediaInput"
+                    type="file"
+                    accept="image/*,video/*">
+
+            </div>
+
+        </div>
+
+        <!-- BACKEND FIELD -->
+        <div
+            id="fields"
+            style="display:none">
+        </div>
+
+    </section>
+
+
+    <!-- GENERATE -->
+    <button
+        class="generate-btn"
+        id="generateBtn">
+
+        ✨ Generate AI
+
+    </button>
+
+
+    <!-- SISTEM AKTIF -->
+    <section
+        class="card system-card"
+        id="systemCard">
+
+        <div class="card-title">
+
+            <div class="system-title-row">
+
+                <span
+                    class="system-indicator">
+                </span>
+
+                SISTEM AKTIF
+
+            </div>
+
+        </div>
+
+
+        <div class="system-status">
+
+            <span class="status-dot"></span>
+
+            <span id="statusText">
+                SYSTEM STANDBY
+            </span>
+
+        </div>
+
+
+        <div class="terminal">
+
+            <div class="terminal-top">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+
+            <div
+                id="systemText"
+                class="system-text">
+
+SYSTEM READY...
+WAITING FOR INPUT...
+
+            </div>
+
+
+            <div class="progress">
+
+                <div
+                    class="progress-bar"
+                    id="progressBar">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULT -->
+    <section
+        class="card result"
+        id="result">
+
+        <div class="result-title">
+            ✓ AI GENERATION RESULT
+        </div>
+
+        <img
+            id="resultImage"
+            alt="Hasil AI">
+
+        <pre
+            id="resultText"></pre>
+
+        <div
+            id="resultLinks"
+            class="result-links">
+        </div>
+
+        <button
+            class="download-btn"
+            id="downloadBtn">
+
+            Download Hasil
+
+        </button>
+
+    </section>
+
+</div>
+
+
+<!-- LOADING -->
+<div
+    class="loading"
+    id="loading">
+
+    <div class="loader-box">
+
+        <div class="loader"></div>
+
+        <p>
+            AI sedang memproses...
+        </p>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+  <script src="musik generate.js"></script>
+
+</body>
+</html>
